@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kox-8M-KfW">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kox-8M-KfW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UpW-55-68d">
@@ -43,6 +43,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kox-8M-KfW" secondAttribute="trailing" id="Nq1-nl-wh8"/>
+                            <constraint firstItem="3YV-1H-5sq" firstAttribute="top" secondItem="kox-8M-KfW" secondAttribute="bottom" id="P4r-Yp-SQl"/>
+                            <constraint firstItem="kox-8M-KfW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="S7t-y5-UtU"/>
+                            <constraint firstItem="kox-8M-KfW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="XPt-HC-JP0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="testCollectionView" destination="kox-8M-KfW" id="uEp-51-6bc"/>

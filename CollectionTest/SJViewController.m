@@ -30,16 +30,21 @@ static NSString *CellId = @"SJTestCell";
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SJTestCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellId forIndexPath:indexPath];
-    
+    [cell configure];
+
+    /*
     if (cellsRequested > 100){
         while (true){
-//            NSLog(@"imma burn your CPU. Happy now?");
+            //            NSLog(@"imma burn your CPU. Happy now?");
         }
     }
     else {
         cellsRequested++;
     }
-    
+     */
+
+    cellsRequested++;
+
     return cell;
 }
 
