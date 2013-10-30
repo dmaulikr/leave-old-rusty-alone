@@ -8,4 +8,6 @@
 
 @interface SJTestCell : UICollectionViewCell
 
+- (void)configure;
+
 @end
