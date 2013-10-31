@@ -6,11 +6,10 @@
 #import "SJViewController.h"
 #import "SJTestCell.h"
 
-@interface SJViewController () <UICollectionViewDataSource, UICollectionViewDelegate>{
-    int cellsRequested;
-}
+@interface SJViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *testCollectionView;
+
 @end
 
 @implementation SJViewController
@@ -19,7 +18,6 @@ static NSString *CellId = @"SJTestCell";
 - (void)viewDidLoad{
     [super viewDidLoad];
 	
-    cellsRequested = 0;
     [_testCollectionView registerNib:[UINib nibWithNibName:@"SJTestCell" bundle:nil] forCellWithReuseIdentifier:CellId];
 }
 
@@ -31,19 +29,6 @@ static NSString *CellId = @"SJTestCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SJTestCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellId forIndexPath:indexPath];
     [cell configure];
-
-    /*
-    if (cellsRequested > 100){
-        while (true){
-            //            NSLog(@"imma burn your CPU. Happy now?");
-        }
-    }
-    else {
-        cellsRequested++;
-    }
-     */
-
-    cellsRequested++;
 
     return cell;
 }
